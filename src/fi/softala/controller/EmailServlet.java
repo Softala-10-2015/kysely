@@ -3,6 +3,7 @@ package fi.softala.controller;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,6 +48,15 @@ public class EmailServlet extends HttpServlet {
 		//Haetaan käyttäjän syöttämä tieto
 		String vastaus=request.getParameter("InputMessage");
 		String receiver = request.getParameter("receiver");
+		
+		Map<String, String[]> parameterMap = request.getParameterMap();
+		String fullInfo="";
+		for (Map.Entry<String, String[]> entry : parameterMap.entrySet()) {
+		    String key = entry.getKey();
+		    String[] value = entry.getValue();
+		    fullInfo+=key+"   "+value[0]+"\n";
+		}
+		System.out.println(fullInfo);
 		
 		//Haetaan tunnukset property filestä
 		String acc = PropertyReader.getInstance().getProperty("email_account");
