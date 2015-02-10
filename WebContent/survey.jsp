@@ -107,7 +107,7 @@
 <br/>
 <div class="container"> 
 
-<label for="InputMessage">Toteutus:</label><br>
+<label for="input_message">Toteutus:</label><br>
 <div class="btn-group" data-toggle="buttons">
 
   <label class="btn btn-primary active">
@@ -129,8 +129,8 @@
 <!-- Tekstikenttä -->
 <div class="form-group">
 <div class="input-group">
-<label for="InputMessage">Ole hyvä ja kerro, miltä sinusta nyt tuntuu:</label>
-<input type="text" name="InputMessage" id="InputMessage" class="form-control" rows="5" required autofocus>
+<label for="input_message">Ole hyvä ja kerro, miltä sinusta nyt tuntuu:</label>
+<input type="text" name="input_message" id="input_message" class="form-control" rows="5" required autofocus>
 <input type="hidden" name="receiver" value="softala2015@gmail.com">
 </div>
 </div>
@@ -141,7 +141,7 @@
 
 <div class="well">	
 <br>
-<label for="InputMessage">Ole hyvä ja kerro, miltä sinusta nyt tuntuu hymynaamoilla:</label><br>
+<label for="input_message">Ole hyvä ja kerro, miltä sinusta nyt tuntuu hymynaamoilla:</label><br>
 <div class="btn-group" data-toggle="buttons">
 
   <label class="btn btn-primary">
@@ -158,7 +158,7 @@
 
 <div class="well">
 <br>
-<label for="InputMessage">Ole hyvä ja kerro, miltä sinusta nyt tuntuu tsekbokseilla: </label><br>
+<label for="input_message">Ole hyvä ja kerro, miltä sinusta nyt tuntuu tsekbokseilla: </label><br>
 <div class="btn-group" data-toggle="buttons">
   <label class="btn btn-primary">
     <input type="checkbox" autocomplete="off"> Feels good man

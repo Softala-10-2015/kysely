@@ -46,7 +46,7 @@ public class EmailServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//Haetaan käyttäjän syöttämä tieto
-		String vastaus=request.getParameter("InputMessage");
+		String vastaus=request.getParameter("input_message");
 		String receiver = request.getParameter("receiver");
 		
 		Map<String, String[]> parameterMap = request.getParameterMap();
