@@ -35,7 +35,7 @@ public class EmailServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		rd = request.getRequestDispatcher("hyvinvointikysely.jsp");
+		rd = request.getRequestDispatcher("survey.jsp");
 		rd.forward(request, response);
 	}
 
@@ -59,7 +59,7 @@ public class EmailServlet extends HttpServlet {
 		email.lahetaSahkoposti(acc, pwd, receiver,  "Palaute", vastaus);
 		
 		//Välitys seuraavalle jsp-sivulle
-		rd = request.getRequestDispatcher("vahvistus.jsp");
+		rd = request.getRequestDispatcher("confirmation.jsp");
 		rd.forward(request, response);
 	}
 }

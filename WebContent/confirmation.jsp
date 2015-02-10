@@ -52,7 +52,7 @@
                 <li><a href="#">Soita poliisille</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Missä Auringon Pizza Kebab?</li>
-                <li><a href="kysymys.jsp">Uraz Ahmet</a></li>
+                <li>Uraz Ahmet</li>
               </ul>
             </li>
           </ul>
@@ -68,7 +68,7 @@
       <div class="container">
 		<h3>Kiitti hei</h3>
 		<p>oli kiva ku vastasit</p>
-		<a class="btn btn-primary btn-lg" role="button" href="hyvinvointikysely.jsp" >Palaa</a>
+		<a class="btn btn-primary btn-lg" role="button" href="survey.jsp" >Palaa</a>
 	    </div>
 		</div>
 	

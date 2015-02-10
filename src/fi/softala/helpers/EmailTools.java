@@ -12,10 +12,10 @@ import javax.mail.internet.*;
  *
  */
 public class EmailTools {
-	public void lahetaSahkoposti(String lahettajanGoogleEmail, String lahettajanGoogleSalasana, String vastaanottajanEmail, String otsikko, String emailinSisalto ) {
+	public void lahetaSahkoposti(String senderGoogleEmail, String senderGoogleSalasana, String receiverEmail, String title, String emailContent ) {
 		// Asetetaan Stringeihin l�hett�j�n kredentiaalit
-		String from = lahettajanGoogleEmail;
-		String pass = lahettajanGoogleSalasana;
+		String from = senderGoogleEmail;
+		String pass = senderGoogleSalasana;
 		// S�hk�postipalvelin
 		String host = "smtp.gmail.com";
 
@@ -41,13 +41,13 @@ public class EmailTools {
 
 			// Viestin vastaanottajan asettaminen
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(
-					vastaanottajanEmail));
+					receiverEmail));
 
 			// Viestin otsikko eli subject
-			message.setSubject(otsikko);
+			message.setSubject(title);
 
 			// Asetetaan itse viestin sis�lt�
-			message.setText(emailinSisalto);
+			message.setText(emailContent);
 
 			// L�hetet��n viesti
 			Transport transport = session.getTransport("smtp");
