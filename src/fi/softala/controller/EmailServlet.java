@@ -59,14 +59,14 @@ public class EmailServlet extends HttpServlet {
 		System.out.println(fullInfo);
 		
 		//Haetaan tunnukset property filestä
-		String acc = PropertyReader.getInstance().getProperty("email_account");
-		String pwd = PropertyReader.getInstance().getProperty("email_password");
-		System.out.println(acc);
-		System.out.println(pwd);
+		String senderEmail = PropertyReader.getInstance().getProperty("email_account");
+		String senderPassword = PropertyReader.getInstance().getProperty("email_password");
+		System.out.println(senderEmail);
+		System.out.println(senderPassword);
 		
 		//Luodaan EmailTools-olio, joka lähettää sähköpostin haluttuun osoitteeseen
 		EmailTools email = new EmailTools();
-		email.lahetaSahkoposti(acc, pwd, receiver,  "Palaute", vastaus);
+		email.lahetaSahkoposti(senderEmail, senderPassword, receiver,  "Palaute", vastaus);
 		
 		//Välitys seuraavalle jsp-sivulle
 		rd = request.getRequestDispatcher("confirmation.jsp");
