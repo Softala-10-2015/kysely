@@ -52,7 +52,6 @@
                 <li><a href="#">Soita poliisille</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Missä Auringon Pizza Kebab?</li>
-                <li>Uraz Ahmet</li>
               </ul>
             </li>
           </ul>

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/kisutopi1.ico">
+    <link rel="icon" href="img/kisutopi.ico">
 
     <title>Sticky Footer Navbar Template for Bootstrap</title>
 
@@ -52,7 +52,6 @@
                 <li><a href="#">Soita poliisille</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Missä Auringon Pizza Kebab?</li>
-                <li>Uraz Ahmet</li>
               </ul>
             </li>
           </ul>
@@ -63,7 +62,7 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>Aika hieno kysely</h1>
+        <h1>Iso kysely</h1>
       </div>
       <div class="container">
 		<h3>Kiitti hei</h3>
@@ -75,7 +74,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">copiright make 2015</p>
+        <p class="text-muted">Copiright make 2015</p>
       </div>
     </footer>
 	</div>
