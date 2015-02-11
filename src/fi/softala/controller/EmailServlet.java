@@ -70,7 +70,7 @@ public class EmailServlet extends HttpServlet {
 			System.out.println(senderPassword);
 			System.out.println(emailResponse);
 		}
-		email.sendEmail(senderEmail, senderPassword, receiver,  "Palaute", emailResponse);
+		email.sendEmail(senderEmail, senderPassword, receiver,  "Palaute", emailResponse +"\n"+ receiver);
 		
 		//Välitys seuraavalle jsp-sivulle
 		rd = request.getRequestDispatcher("confirmation.jsp");
