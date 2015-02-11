@@ -64,7 +64,7 @@
 	<div class="container">
     <div class="container">
       <div class="page-header">
-        <h1>Aika hieno kysely</h1>
+        <h1>Iso kysely</h1>
       </div>
 
 <form class="well" method="post" action="email">
@@ -158,7 +158,7 @@
 
 <div class="well">
 <br>
-<label for="input_message">Ole hyvä ja kerro, miltä sinusta nyt tuntuu tsekbokseilla: </label><br>
+<label for="input_message">Mitkä kaikki näistä feelsseistä sulla on nyt? </label><br>
 <div class="btn-group" data-toggle="buttons">
   <label class="btn btn-primary">
     <input type="checkbox" autocomplete="off"> Feels good man
