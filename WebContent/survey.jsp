@@ -179,7 +179,7 @@
 </div>
 </form>
     <footer class="footer">
-      <div class="well">
+      <div class="container">
         <p class="text-muted">Copiright Make 2015</p>
       </div>
     </footer>

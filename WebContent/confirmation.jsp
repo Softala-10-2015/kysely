@@ -70,7 +70,7 @@
 		<p>oli kiva ku vastasit</p>
 		<a class="btn btn-primary btn-lg" role="button" href="survey.jsp" >Palaa</a>
 	    </div>
-		</div>
+		
 	
 
     <footer class="footer">
@@ -78,7 +78,7 @@
         <p class="text-muted">copiright make 2015</p>
       </div>
     </footer>
-
+	</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
