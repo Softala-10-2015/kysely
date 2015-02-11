@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class PropertyReader {
 
-	public static final String FILE_NAME = "sender_account";
+	public static final String FILE_NAME = "senderAccount";
 	private static PropertyReader instance;
 	private Properties properties;
 

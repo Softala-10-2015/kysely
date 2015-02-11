@@ -12,7 +12,7 @@ import javax.mail.internet.*;
  *
  */
 public class EmailTools {
-	public void lahetaSahkoposti(String senderGoogleEmail, String senderGooglePassword, String receiverEmail, String title, String emailContent ) {
+	public void sendEmail(String senderGoogleEmail, String senderGooglePassword, String receiverEmail, String title, String emailContent ) {
 		// Asetetaan Stringeihin l�hett�j�n kredentiaalit
 		String from = senderGoogleEmail;
 		String pass = senderGooglePassword;
