@@ -12,10 +12,10 @@ import javax.mail.internet.*;
  *
  */
 public class EmailTools {
-	public void lahetaSahkoposti(String senderGoogleEmail, String senderGoogleSalasana, String receiverEmail, String title, String emailContent ) {
+	public void lahetaSahkoposti(String senderGoogleEmail, String senderGooglePassword, String receiverEmail, String title, String emailContent ) {
 		// Asetetaan Stringeihin l�hett�j�n kredentiaalit
 		String from = senderGoogleEmail;
-		String pass = senderGoogleSalasana;
+		String pass = senderGooglePassword;
 		// S�hk�postipalvelin
 		String host = "smtp.gmail.com";
 

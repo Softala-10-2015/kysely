@@ -1,8 +1,6 @@
 package fi.softala.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
@@ -46,7 +44,7 @@ public class EmailServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//Haetaan käyttäjän syöttämä tieto
-		String vastaus=request.getParameter("input_message");
+		String emailResponse=request.getParameter("InputMessage");
 		String receiver = request.getParameter("receiver");
 		
 		Map<String, String[]> parameterMap = request.getParameterMap();
@@ -55,18 +53,18 @@ public class EmailServlet extends HttpServlet {
 		    String key = entry.getKey();
 		    String[] value = entry.getValue();
 		    fullInfo+=key+"   "+value[0]+"\n";
-		}
+		} 
 		System.out.println(fullInfo);
 		
 		//Haetaan tunnukset property filestä
-		String senderEmail = PropertyReader.getInstance().getProperty("email_account");
-		String senderPassword = PropertyReader.getInstance().getProperty("email_password");
-		System.out.println(senderEmail);
-		System.out.println(senderPassword);
+		String acc = PropertyReader.getInstance().getProperty("email_account");
+		String pwd = PropertyReader.getInstance().getProperty("email_password");
+		System.out.println(acc);
+		System.out.println(pwd);
 		
 		//Luodaan EmailTools-olio, joka lähettää sähköpostin haluttuun osoitteeseen
 		EmailTools email = new EmailTools();
-		email.lahetaSahkoposti(senderEmail, senderPassword, receiver,  "Palaute", vastaus);
+		email.lahetaSahkoposti(acc, pwd, receiver,  "Palaute", emailResponse);
 		
 		//Välitys seuraavalle jsp-sivulle
 		rd = request.getRequestDispatcher("confirmation.jsp");
