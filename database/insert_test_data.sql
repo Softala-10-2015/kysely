@@ -1,4 +1,4 @@
-INSERT INTO Kysymys
-	(kysymys,email)
+INSERT INTO Question
+	(question, email)
 VALUES
 	("Miten koet selvinneesi kurssilla?","opettaja@opettajuus.net");
