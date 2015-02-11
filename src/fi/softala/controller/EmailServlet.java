@@ -44,7 +44,7 @@ public class EmailServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//Haetaan käyttäjän syöttämä tieto
-		String emailResponse=request.getParameter("InputMessage");
+		String emailResponse=request.getParameter("input_message");
 		String receiver = request.getParameter("receiver");
 		
 		Map<String, String[]> parameterMap = request.getParameterMap();
@@ -64,6 +64,12 @@ public class EmailServlet extends HttpServlet {
 		
 		//Luodaan EmailTools-olio, joka lähettää sähköpostin haluttuun osoitteeseen
 		EmailTools email = new EmailTools();
+		if(senderEmail == null || senderPassword == null || emailResponse == null ){
+			System.out.println("AAAAAAAAAASD");
+			System.out.println(senderEmail);
+			System.out.println(senderPassword);
+			System.out.println(emailResponse);
+		}
 		email.sendEmail(senderEmail, senderPassword, receiver,  "Palaute", emailResponse);
 		
 		//Välitys seuraavalle jsp-sivulle
