@@ -50,9 +50,8 @@ public class EmailServlet extends HttpServlet {
 		Map<String, String[]> parameterMap = request.getParameterMap();
 		String fullInfo="";
 		for (Map.Entry<String, String[]> entry : parameterMap.entrySet()) {
-		    String key = entry.getKey();
 		    String[] value = entry.getValue();
-		    fullInfo+=key+"   "+value[0]+"\n";
+		    fullInfo+=value[0]+"\n";
 		} 
 		System.out.println(fullInfo);
 		
@@ -64,13 +63,15 @@ public class EmailServlet extends HttpServlet {
 		
 		//Luodaan EmailTools-olio, joka lähettää sähköpostin haluttuun osoitteeseen
 		EmailTools email = new EmailTools();
+		//Testi että tiedot latautuu jsp:stä
 		if(senderEmail == null || senderPassword == null || emailResponse == null ){
-			System.out.println("AAAAAAAAAASD");
+			System.out.println("Hajosi");
 			System.out.println(senderEmail);
 			System.out.println(senderPassword);
 			System.out.println(emailResponse);
 		}
-		email.sendEmail(senderEmail, senderPassword, receiver,  "Palaute", emailResponse +"\n"+ receiver);
+		
+		email.sendEmail(senderEmail, senderPassword, receiver,  "Palaute", fullInfo);
 		
 		//Välitys seuraavalle jsp-sivulle
 		rd = request.getRequestDispatcher("confirmation.jsp");
