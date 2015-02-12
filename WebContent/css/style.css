@@ -37,3 +37,5 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+select#course-opt, select#class-year{ width:auto}
