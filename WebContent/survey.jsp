@@ -17,7 +17,6 @@
 	<link href="css/style.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -68,19 +67,15 @@
 
 <form class="well" method="post" action="email">
   <h3>Kurssin tiedot</h3>
-  <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Kurssitunnus
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">SWE12345</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">BUS54321</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ohjelmistokehitys</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mustalaisten opetuskerho</a></li>
-  </ul>
-  </div>
-<br/>
+  <!--  optionit jsp loopilla? --> 
+  <div class="form-group">
+  <label for="course-opt">Kurssitunnus:</label>
+  <select class="form-control" id="course-opt">
+  <option>Valitse</option>
+  <option>SWE12345</option>
+  <option>BUS54321</option>
+ </select>
+</div>
   <div class="input-group">
   <span class="input-group-addon" id="basic-addon1"></span>
   <input type="text" class="form-control" placeholder="Kurssin nimi" aria-describedby="basic-addon1">
@@ -90,20 +85,16 @@
   <span class="input-group-addon" id="basic-addon1"></span>
   <input type="text" class="form-control" placeholder="Opettajan nimi" aria-describedby="basic-addon1">
 </div>
-<br/>
-  <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Vuosikurssi
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2015</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2014</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2013</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2012</a></li>
-  </ul>
-  </div>
-<br/>
+<!--  optionit jsp loopilla? --> 
+  <div class="form-group">
+  <label for="class-year">Vuosikurssi:</label>
+  <select class="form-control" id="class-year">
+  <option>2012</option>
+  <option>2013</option>
+  <option>2014</option>
+  <option>2015</option>
+ </select>
+</div>
 <div class="container"> 
 
 <label for="input_message">Toteutus:</label><br>
@@ -189,6 +180,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
